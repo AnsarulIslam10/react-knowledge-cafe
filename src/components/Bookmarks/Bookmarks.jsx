@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Bookmark from "../../Bookmark/Bookmark";
+import Bookmark from "../Bookmark/Bookmark";
 const Bookmarks = ({ bookmarks, readingTime }) => {
 
     return (
@@ -10,7 +10,7 @@ const Bookmarks = ({ bookmarks, readingTime }) => {
             <div className="bg-gray-100 ml-4  p-4 rounded-xl">
                 <h2 className="text-3xl font-bold">Bookmarked Blogs: {bookmarks.length}</h2>
                 {
-                    bookmarks.map(bookmark => <Bookmark key={bookmark.id} bookmark={bookmark}></Bookmark>)
+                    bookmarks.map((bookmark, idx) => <Bookmark key={idx} bookmark={bookmark}></Bookmark>)
                 }
             </div>
         </div>
