@@ -1,4 +1,5 @@
 import PropTypes, { bool } from 'prop-types';
+import { FaRegBookmark } from "react-icons/fa6";
 
 const Blog = ({ blog }) => {
     const { title, cover, author_img, author, posted_date, reading_time, hashtags } = blog
@@ -15,7 +16,8 @@ const Blog = ({ blog }) => {
                 </div>
                 <div className='flex items-center gap-2'>
                     <h3 className='text-gray-500'>{reading_time} min read</h3>
-                    <i className="fa-regular fa-bookmark text-gray-500"></i>
+                    <span className='text-gray-500'><FaRegBookmark />
+                    </span>
                 </div>
             </div>
             <h1 className='text-2xl sm:text-3xl md:text-[40px] font-semibold mt-4 mb-4'>{title}</h1>
